@@ -16,3 +16,18 @@ def encryptCaesar(msg, shift=3):
         else:
             ret += x
     return ret
+
+
+def decryptCaesar(msg, shift=3):
+    ret = ""
+    for x in msg:
+        if x in first_lst:
+            ind = first_lst.index(x)
+            ret += first_lst[ind-shift]
+        elif x in second_lst:
+            ind = second_lst.index(x)
+            ret += second_lst[ind-shift]
+        else:
+            ret += x
+    return ret
+
