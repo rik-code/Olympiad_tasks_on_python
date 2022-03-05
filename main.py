@@ -4,3 +4,15 @@ second_lst = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'Й', 'К', 
         'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я']
 
 
+def encryptCaesar(msg, shift=3):
+    ret = ""
+    for x in msg:
+        if x in first_lst:
+            ind = first_lst.index(x)
+            ret += first_lst[ind+shift]
+        elif x in second_lst:
+            ind = second_lst.index(x)
+            ret += second_lst[ind+shift]
+        else:
+            ret += x
+    return ret
