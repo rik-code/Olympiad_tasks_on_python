@@ -31,3 +31,5 @@ def decryptCaesar(msg, shift=3):
             ret += x
     return ret
 
+print(encryptCaesar("Да здравствует салат Цезарь!"))
+print(decryptCaesar("Зг кзугефхецих фгогх Щикгуя!"))
